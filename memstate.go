@@ -84,3 +84,8 @@ func (s *MemStateStore) Delete(state string) error {
 
 	return nil
 }
+
+// SetValueGenerator changes the default random number generator. Use only in tests.
+func (s *MemStateStore) SetValueGenerator(generator ValueGenerator) {
+	s.valueGenerator = generator
+}
